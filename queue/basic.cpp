@@ -1,5 +1,6 @@
 #include<iostream>
 #include<queue>
+#include<stack>
 using namespace std;
 int main(){
     // push,front , size , empty , pop, back
@@ -35,8 +36,29 @@ int main(){
         display.pop();  
     }
     cout<<endl;
-    cout<<display.size();
+    cout<<display.size()<<endl;
+// Reversing a queue using stack
+// it hard to do with another queue 
+// but we can take another options in place of using stack
 
+// helper stack
+stack<int> helper;
+while(!display.empty()){
+    helper.push(display.front());
+    display.pop();
+}
+cout<<"size of queue ";
+cout<<display.size()<<endl;
+cout<<"Now get the reverse queue ......"<<endl;
+while(!helper.empty()){
+    display.push(helper.top());
+    helper.pop();
+}
+cout<<"Printing Reverse Queue"<<" ";
+while(!display.empty()){
+    cout<<display.front()<<" ";
+    display.pop();
+}
 
-
+// try these thing using function Ok
 }
