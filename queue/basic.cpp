@@ -9,5 +9,11 @@ int main(){
     q.push(14);
     q.push(324);
     q.push(36);
-    cout<<q.front();
+    cout<<q.front()<<endl;
+    cout<<q.size()<<endl;
+    cout<<q.empty()<<endl;
+    // cout<<q.pop(); doesn't return a value
+    q.pop();
+    cout<<q.size()<<endl;
+    cout<<q.front()<<endl;
 }
