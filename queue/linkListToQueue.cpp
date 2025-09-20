@@ -34,7 +34,9 @@ public:
             cout<<"Queue is empty!"<<endl;
             return;
         }
+        Node* temp = head;
         head= head->next;
+        delete(temp);
         s--;
     }
     int front(){
