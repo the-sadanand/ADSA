@@ -40,5 +40,6 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "typeinfo": "cpp"
-    }
+    },
+    "editor.multiCursorModifier": "ctrlCmd"
 }
