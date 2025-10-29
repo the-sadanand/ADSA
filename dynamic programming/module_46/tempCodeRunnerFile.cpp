@@ -1,0 +1,1 @@
+minStep(n-1), (n%2==0)?minStep(n/2):inf, (n%3==0)?minStep(n/3):inf
