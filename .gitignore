@@ -1,12 +1,2 @@
-// ...existing code...
-# ignore a folder named "module" at repo root
-/module/
-
-# or ignore any folder that starts with "module"
-module*/
-
-
-# or ignore all module* folders under maps
-maps/module*/
 
 .vscode
