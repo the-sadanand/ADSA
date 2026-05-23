@@ -9,6 +9,7 @@ int find(vector<int>&parent, int x){
 void union(vector<int>&parent, vector<int>&rank , int a , int b){
     a=find(a);
     b=find(b);
+    if(a==b) return ;
     if(rank[a]>=rank[b]){
         parent[b]=a;
         rank[a]++;
