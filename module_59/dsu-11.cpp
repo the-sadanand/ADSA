@@ -9,9 +9,9 @@ int find(vector<int> &parent , int a){
 }
 
 
-void union(vector<int>&parent , vector<int>&sz , vector<int> &rank , vector<int>&minimal , vector<int>&maximal , int a , int b){
-    a = find(a);
-    b = find(b);
+void Union( vector<int> &parent , vector<int> &sz , vector<int> &rank , vector<int> &minimal , vector<int> &maximal , int a , int b){
+    a = find(parent,a);
+    b = find(parent,b);
     if(a==b) return ;
     if(rank[a]>rank[b]){
         rank[a]++;
@@ -30,15 +30,18 @@ void union(vector<int>&parent , vector<int>&sz , vector<int> &rank , vector<int>
 }
 
 
-void file_i_o(){
-    ios_base::sync_with_studio(0);
-    cin.tie(0);
-    cout.tie(0);
-}
+// void file_i_o(){
+//     ios_base::sync_with_studio(0);
+//     cin.tie(0);
+//     cout.tie(0);
+// }
+
 int main(){
+    // file_i_o();
     int n,m;
     // n -> number of entries m -> number of cases
     cin>>m>>n;
+
     vector<int>parent(n+1);
     vector<int>rank(n+1,0);
     vector<int>sz(n+1,1);
@@ -54,7 +57,7 @@ int main(){
         if(str =="union"){
             int x, y;
             cin>>x>>y;
-            union(parent , sz , rank , minimal , maximal , x , y);
+            Union(parent , sz , rank , minimal , maximal , x , y);
         }
         else{
             int x;
