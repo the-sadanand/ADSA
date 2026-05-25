@@ -30,14 +30,14 @@ void Union( vector<int> &parent , vector<int> &sz , vector<int> &rank , vector<i
 }
 
 
-// void file_i_o(){
-//     ios_base::sync_with_studio(0);
-//     cin.tie(0);
-//     cout.tie(0);
-// }
+void file_i_o(){
+    ios_base::sync_with_studio(0);
+    cin.tie(0);
+    cout.tie(0);
+}
 
 int main(){
-    // file_i_o();
+    file_i_o();
     int n,m;
     // n -> number of entries m -> number of cases
     cin>>m>>n;
