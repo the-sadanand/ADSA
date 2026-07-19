@@ -24,7 +24,7 @@ int getMax(int i , int lo , int hi , int &l , int &r){
     if(l>hi || r<lo) {
         return INT_MIN;
     }
-    // case of query is big in range
+    // case of query range  is completely or equal to  range
     if(lo>=l && hi<=r) {
         return st[i];
     }
