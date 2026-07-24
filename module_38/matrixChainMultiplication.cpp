@@ -11,12 +11,13 @@ vector<vector<int>> dp;
 int f(int i , int j , vector<int>&arr){
     if(i==j || j==i+1) return 0; // when [a,b] shows dim of matrix and its mul is zero 
     // cuz it is single matrix
+
+    if(dp[i][j]!=-1) return dp[i][j];
     /*
     what i am implementing in using this loop and k variable is 
     if element is from i to j , then i+1 <= k <=j-1
      where k form the different seperatio in one call two sepation of whole given array from i to k and k to j    */
     int ans = INT_MAX;
-
     for(int k = i+1 ; k<=j-1 ; k++){
         ans = min(ans, f(i,k,arr)+f(k,j,arr)+arr[i]*arr[j]*arr[k]);
     }
@@ -26,6 +27,8 @@ int f(int i , int j , vector<int>&arr){
 
 
 int main(){
+    dp.clear();
+    dp.resize(1004, vector<int>(1000,-1));
     vector<int> arr = {4,2,3,1,3};
     cout<<f(0, arr.size()-1, arr);
 }
