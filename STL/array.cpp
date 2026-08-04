@@ -27,4 +27,5 @@ int main(){
     array<int,6> arr2 = {4,5,6,36,4,6};
     arr1.swap(arr2);
     cout<<arr1.at(0);
+    cout<<arr1.at(10);
 }
